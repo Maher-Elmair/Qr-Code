@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+:root {
+    background-color: rgb(213, 225, 239);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*small*/
+@media (min-width: 577px) {
+    .container {
+        width: 550px;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* desktop  */
+@media (min-width: 1300px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.parent {
+    display: block;
+    overflow: hidden;
+    margin: auto;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 7px 14px 1px #a3a3a3;
+    position: relative;
+    top: 120px;
+    max-width: 240px;
+}
+
+.parent:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-one {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 5px;
+    filter: blur(2px);
+    transition: 3s;
+}
+
+.middle {
+    opacity: 1;
+    transition: 3s;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    /* transform: translate(-40%, -30%); */
+}
+
+.image-container:hover .image-one {
+    transition: 3s;
+    filter: blur(0);
+    transform: scale(1.05) rotateY(360deg);
+}
+
+.image-container:hover .middle {
+    opacity: 0;
+}
+
+.text {
+    text-align: center;
+}
+
+.one {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 15px;
+    color: rgb(32, 48, 77);
+}
+
+.two {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: darkgray;
+}
+
+/*! start Attribution */
+.attribution {
+    position: relative;
+    top: 20rem;
+    color: rgb(32, 48, 77);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.attribution a {
+    font-size: smaller;
+    text-decoration: none;
+    color: rgb(43, 125, 250);
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.attribution a:hover::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    content: "\f0a9";
+    font-size: 14px;
+    padding: 0 8px;
+}
+
+@media (max-width: 440px) {
+    .attribution {
+        white-space: break-spaces;
+        line-height: 2;
+        left: 0;
+    }
+}
+
+/*! end Attribution */
